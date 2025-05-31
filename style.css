@@ -76,7 +76,7 @@ main{
         border-radius: 1.6rem;
         margin-bottom: 1.6rem;
         outline: none;
-        color: var(--content-primary)
+        color: var(--content-primary);
 
         &::placeholder{
             color: var(--content-tertiary);
@@ -107,6 +107,66 @@ main{
         &:hover{
             background: var(--color-brand-hover);
         }
-    
+
+    }
+}
+
+.list {
+    .item {
+        background: var(--background-secondary);
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 2,4rem;
+        font-weight: 500;
+        border-radius: 1.2rem;
+        box-shadow: 0px 4px 16px rgba(8, 11, 18, 0.2);
+
+        div{
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+
+        }
+
+        .custom-checkbox{
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 1px solid var(--border-primary);
+            border-radius: .6rem;
+        }
+
+        div:has(input:checked) {
+            .custom-checkbox {
+                background: var(--color-brand);
+                border: 1px solid var(--color-brand);
+                transition: .2s;
+            }
+
+            label{
+                text-decoration: line-through;
+            }
+        }
+
+        label{
+            cursor: pointer;
+        }
+
+        button {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            img{
+                width: 1.6rem;
+                opacity: 0.7;
+
+            }
+        }
     }
 }
